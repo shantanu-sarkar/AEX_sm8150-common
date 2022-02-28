@@ -37,16 +37,6 @@
         android:title="@string/refresh_rate_title"
         android:persistent="false" />
 
-    <Preference
-        android:key="panel_category"
-        android:title="@string/panel_category_title"
-        android:summary="@string/panel_category_summary"
-        android:persistent="false" >
-        <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.aex.device.DeviceSettings"
-                android:targetClass="com.aex.device.DeviceSettings.PanelSettingsActivity" />
-    </Preference>
-
     <PreferenceCategory
         android:key="slider"
         android:title="@string/notification_slider_category_title">
