@@ -71,6 +71,11 @@ on fs
     #yumei.su@system Bug55987 mkdir rbr_log
     mkdir /mnt/vendor/op2/rbr_log 0770 system system
 
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
+
     #yumei.su@system Bug35643 mkdir and mount op1
     mkdir /mnt/vendor/op1 0660 system system
     mount ext4 /dev/block/bootdevice/by-name/op1 /mnt/vendor/op1 noatime nosuid nodev barrier=1
